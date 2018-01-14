@@ -3,6 +3,11 @@ import PropTypes from 'prop-types'
 import './GameProgress.css'
 
 class GameProgress extends PureComponent {
+  static propTypes = {
+    word: PropTypes.string.isRequired,
+		guesses: PropTypes.array.isRequired,
+		lost: PropTypes.bool.isRequired,
+	}
 
   showGuess(word, guesses) {
     const splitWord = word.split("")

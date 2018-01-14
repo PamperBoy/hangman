@@ -6,7 +6,9 @@ import './LetterButton.css'
 class LetterButton extends PureComponent {
 	static propTypes = {
     letter: PropTypes.string.isRequired,
+    disabled: PropTypes.bool.isRequired,
     index: PropTypes.number.isRequired,
+		guesses: PropTypes.array.isRequired,
 	}
 
 	render() {

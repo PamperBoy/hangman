@@ -29,7 +29,6 @@ class GameContainer extends PureComponent {
     return images[number]
   }
 
-
   render() {
     const { word, guesses } = this.props
     return(
@@ -44,7 +43,8 @@ class GameContainer extends PureComponent {
             lost={this.gameLost(word, guesses)}
             />
         </h1>
-        <ButtonList guesses={guesses}
+        <ButtonList
+          guesses={guesses}
           lost={this.gameLost(word, guesses)}
           />
       </main>

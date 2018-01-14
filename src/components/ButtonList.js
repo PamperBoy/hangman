@@ -8,15 +8,10 @@ import { connect } from 'react-redux'
 const alphabet = Array.from({length: 26}, (_, i) => String.fromCharCode(97 + i).toUpperCase())
 
 
-function clickHandler(letter) {
-  console.log(letter)
-  this.props.guess(letter)
-}
-
-
 class ButtonList extends PureComponent {
 	static propTypes = {
-
+		guesses: PropTypes.array.isRequired,
+		lost: PropTypes.bool,
 	}
 
 	render() {
@@ -25,6 +20,7 @@ class ButtonList extends PureComponent {
         {alphabet.map((letter, index) =>
           <LetterButton
             guesses={this.props.guesses}
+            key={letter}
             letter={letter}
             index={index}
             disabled={this.props.lost}
