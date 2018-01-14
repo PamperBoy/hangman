@@ -21,7 +21,7 @@ class ButtonList extends PureComponent {
 
 	render() {
 		return (
-      <div>
+      <div className="button-list-container">
         {alphabet.map((letter, index) =>
           <LetterButton
             guesses={this.props.guesses}

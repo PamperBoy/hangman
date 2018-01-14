@@ -26,9 +26,8 @@ class GameProgress extends PureComponent {
 
     return(
       <div>
-        <p>{this.props.lost && "YOU LOSE!"}</p>
-        <p>{this.isWinner(word, guesses) && "YOU WIN!"}</p>
-        {this.showGuess(word, guesses)}
+        <h1 className="hangman-word">{this.isWinner(word, guesses) && "YOU WIN!"}</h1>
+        <h1 className="hangman-word">{this.showGuess(word, guesses)}</h1>
       </div>
     )
   }
