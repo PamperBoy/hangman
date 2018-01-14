@@ -36,13 +36,11 @@ class GameContainer extends PureComponent {
         <div className="image-wrapper">
           <img src={this.loadImage(word, guesses)} />
         </div>
-        <h1>
-          <GameProgress
-            word={word}
-            guesses={guesses}
-            lost={this.gameLost(word, guesses)}
-            />
-        </h1>
+        <GameProgress
+          word={word}
+          guesses={guesses}
+          lost={this.gameLost(word, guesses)}
+          />
         <ButtonList
           guesses={guesses}
           lost={this.gameLost(word, guesses)}
