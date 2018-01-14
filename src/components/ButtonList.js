@@ -5,7 +5,7 @@ import guess from '../actions/guess'
 import { connect } from 'react-redux'
 
 
-const alphabet = Array.from({length: 26}, (_, i) => String.fromCharCode(97 + i))
+const alphabet = Array.from({length: 26}, (_, i) => String.fromCharCode(97 + i).toUpperCase())
 
 
 function clickHandler(letter) {
@@ -27,6 +27,7 @@ class ButtonList extends PureComponent {
             guesses={this.props.guesses}
             letter={letter}
             index={index}
+            disabled={this.props.lost}
             onClick={() => this.props.guess(letter)}/>
         )}
       </div>

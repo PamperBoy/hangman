@@ -250,7 +250,7 @@ const words = [
 ]
 
 const initialState = {
-  word: words[ Math.floor(Math.random() * words.length) ],
+  word: words[ Math.floor(Math.random() * words.length) ].toUpperCase(),
   guesses: []
 }
 
@@ -260,8 +260,6 @@ export default function(state = initialState, action = {}) {
   switch(action.type) {
     case GUESS :
       const newState = {guesses: [...state.guesses, action.payload]}
-      console.log(newState)
-      console.log({...state, ...newState})
       return {...state, ...newState}
 
     default :
