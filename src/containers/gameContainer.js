@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import ButtonList from '../components/ButtonList'
 import GameProgress from '../components/GameProgress'
+import './gameContainer.css'
 
 const images = [
   require('../assets/images/hang0.png'),
@@ -33,7 +34,9 @@ class GameContainer extends PureComponent {
     const { word, guesses } = this.props
     return(
       <main>
-        <img src={this.loadImage(word, guesses)} />
+        <div className="image-wrapper">
+          <img src={this.loadImage(word, guesses)} />
+        </div>
         <h1>
           <GameProgress
             word={word}

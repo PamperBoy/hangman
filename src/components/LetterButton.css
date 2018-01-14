@@ -13,14 +13,11 @@ border: solid 4px #41403E;
 transition: all .2s ease;
 }
 
-.letter-button h1 {
-  font-size: 5.95vw;
-}
 
 .letter-button:disabled {
   opacity: 0.3;
 
 }
-.letter-button:hover {
+.letter-button:hover:enabled {
   transform: scale(1.2);
 }

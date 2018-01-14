@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import './GameProgress.css'
 
 class GameProgress extends PureComponent {
 
@@ -26,7 +27,7 @@ class GameProgress extends PureComponent {
 
     return(
       <div>
-        <h1 className="hangman-word">{this.isWinner(word, guesses) && "YOU WIN!"}</h1>
+        <h2 className="win">{this.isWinner(word, guesses) && "YOU WIN!"}</h2>
         <h1 className="hangman-word">{this.showGuess(word, guesses)}</h1>
       </div>
     )
