@@ -9,14 +9,19 @@ class LetterButton extends PureComponent {
 	}
 
 	render() {
+		const { index, letter, onClick, disabled, guesses} = this.props
+    const buttonDisabled = (disabled || guesses.includes(letter))
 		return (
-      <button className="letter-button"
-              key={this.props.index}
-              id={this.props.letter}
-              disabled=""
-              onClick={this.props.onClick}>
-              {this.props.letter}
-                  </button>
+
+      <button
+				className="letter-button"
+        key={index}
+        id={letter}
+        disabled={buttonDisabled}
+        onClick={onClick}
+				>
+        	{letter}
+        </button>
     )
 	}
 }

@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ButtonList from './components/ButtonList'
+import GameContainer from './containers/gameContainer'
 
 class App extends Component {
   render() {
     return (
-      <ButtonList />
-    );
+      <div>
+        <GameContainer />
+
+      </div>
+    )
   }
 }
 
