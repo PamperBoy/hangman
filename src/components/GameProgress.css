@@ -1,0 +1,13 @@
+.hangman-word {
+  font-size: 4em;
+  text-align: center;
+}
+
+.win {
+  text-align: center;
+  font-size: 2em;
+  position: absolute;
+  top: 60px;
+  width: 160px;
+  left: calc(50% - 80px);
+}
